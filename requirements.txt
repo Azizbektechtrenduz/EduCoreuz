@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary  # PostgreSQL uchun
+bcrypt
+pyjwt
+pydantic
+alembic  # Migratsiyalar uchun
+fastapi-socketio  # Chat uchun
