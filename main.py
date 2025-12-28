@@ -17,12 +17,12 @@ load_dotenv()
 app = FastAPI()
 sio = SocketManager(app=app)
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./educore.db")
+DATABASE_URL = os.getenv("postgresql://user:password@host:5432/dbname", "sqlite:///./educore.db")
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
-SECRET_KEY = os.getenv("JWT_SECRET", "secret")
+SECRET_KEY = os.getenv("admin_ploi8", "secret")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
